@@ -1,0 +1,235 @@
+/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable property-no-vendor-prefix */
+/* stylelint-disable hue-degree-notation */
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable declaration-colon-newline-after */
+/* stylelint-disable value-list-comma-newline-after */
+/* stylelint-disable color-function-notation */
+/* stylelint-disable selector-combinator-space-before */
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable indentation */
+/* stylelint-disable selector-descendant-combinator-no-non-space */
+@import url('./prose.css');
+@import url('./font.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* stylelint-disable-next-line selector-id-pattern */
+body > #__next {
+  min-height: 100vh;
+}
+
+@keyframes title-blur-change {
+  100% {
+    filter: blur(15px) contrast(200%);
+  }
+}
+
+.toolkits-title:hover {
+  filter: url('#filter');
+}
+
+.location-select-cascader {
+  .ant-cascader-menus {
+    .ant-cascader-menu {
+      /* fix ie 滚动条宽度的bug */
+      @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+      }
+    }
+  }
+}
+
+.solar-eclipse {
+  background: radial-gradient(#fff, #000 65%, #000);
+  mask: radial-gradient(transparent, transparent 55%, #000 56%, #000);
+}
+
+.solar-eclipse::before {
+  background: conic-gradient(
+    rgba(255, 255, 255, 0.97),
+    white,
+    rgba(255, 255, 255, 0.14),
+    rgba(255, 255, 255, 0.14),
+    rgba(255, 255, 255, 0.84),
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.59),
+    rgba(255, 255, 255, 0.79),
+    rgba(255, 255, 255, 0.24),
+    rgba(255, 255, 255, 0.43),
+    rgba(255, 255, 255, 0.67),
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0.81),
+    rgba(255, 255, 255, 0.99),
+    rgba(255, 255, 255, 0.84),
+    rgba(255, 255, 255, 0.91),
+    rgba(255, 255, 255, 0.87),
+    rgba(255, 255, 255, 0.83),
+    rgba(255, 255, 255, 0.66),
+    rgba(255, 255, 255, 0.26),
+    rgba(255, 255, 255, 0.31),
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.62),
+    rgba(255, 255, 255, 0.54),
+    rgba(255, 255, 255, 0.27),
+    rgba(255, 255, 255, 0.84),
+    rgba(255, 255, 255, 0.99),
+    rgba(255, 255, 255, 0.68),
+    rgba(255, 255, 255, 0.36),
+    rgba(255, 255, 255, 0.99),
+    rgba(255, 255, 255, 0.37),
+    rgba(255, 255, 255, 0.97),
+    white,
+    rgba(255, 255, 255, 0.14),
+    rgba(255, 255, 255, 0.14),
+    rgba(255, 255, 255, 0.84),
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.59),
+    rgba(255, 255, 255, 0.79),
+    rgba(255, 255, 255, 0.24),
+    rgba(255, 255, 255, 0.43),
+    rgba(255, 255, 255, 0.67),
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0.81),
+    rgba(255, 255, 255, 0.99),
+    rgba(255, 255, 255, 0.84),
+    rgba(255, 255, 255, 0.91),
+    rgba(255, 255, 255, 0.87),
+    rgba(255, 255, 255, 0.83),
+    rgba(255, 255, 255, 0.66),
+    rgba(255, 255, 255, 0.26),
+    rgba(255, 255, 255, 0.31),
+    rgba(255, 255, 255, 0.13),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.62),
+    rgba(255, 255, 255, 0.54),
+    rgba(255, 255, 255, 0.27),
+    rgba(255, 255, 255, 0.84),
+    rgba(255, 255, 255, 0.99),
+    rgba(255, 255, 255, 0.68),
+    rgba(255, 255, 255, 0.36),
+    rgba(255, 255, 255, 0.99)
+  );
+}
+
+.solar-eclipse::after {
+  background: conic-gradient(
+    rgba(255, 255, 255, 0.83),
+    rgba(255, 255, 255, 0.38),
+    rgba(255, 255, 255, 0.17),
+    rgba(255, 255, 255, 0.82),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.61),
+    rgba(255, 255, 255, 0.34),
+    white,
+    rgba(255, 255, 255, 0.19),
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.65),
+    rgba(255, 255, 255, 0.91),
+    rgba(255, 255, 255, 0.41),
+    rgba(255, 255, 255, 0.66),
+    rgba(255, 255, 255, 0.34),
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.86),
+    rgba(255, 255, 255, 0.46),
+    rgba(255, 255, 255, 0.11),
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.82),
+    rgba(255, 255, 255, 0.93),
+    rgba(255, 255, 255, 0.78),
+    rgba(255, 255, 255, 0.46),
+    rgba(255, 255, 255, 0.77),
+    rgba(255, 255, 255, 0.83),
+    rgba(255, 255, 255, 0.38),
+    rgba(255, 255, 255, 0.17),
+    rgba(255, 255, 255, 0.82),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.61),
+    rgba(255, 255, 255, 0.34),
+    white,
+    rgba(255, 255, 255, 0.19),
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.65),
+    rgba(255, 255, 255, 0.91),
+    rgba(255, 255, 255, 0.41),
+    rgba(255, 255, 255, 0.66),
+    rgba(255, 255, 255, 0.34),
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.86),
+    rgba(255, 255, 255, 0.46),
+    rgba(255, 255, 255, 0.11),
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.82),
+    rgba(255, 255, 255, 0.93),
+    rgba(255, 255, 255, 0.78),
+    rgba(255, 255, 255, 0.46)
+  );
+  animation-duration: 7.6s;
+  animation-direction: reverse;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* 日出日落 */
+@keyframes sunrise {
+  from {
+    transform: rotate(-45deg);
+  }
+
+  to {
+    transform: rotate(225deg);
+  }
+}
+
+/* stylelint-disable-next-line media-feature-range-notation */
+@media (min-width: 1280px) {
+  body {
+    --animation-speed: 28s;
+  }
+}
+
+/* stylelint-disable-next-line media-feature-range-notation */
+@media (min-width: 1500px) {
+  body {
+    --animation-speed: 30s;
+  }
+}
+
+@keyframes about-starts {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* 地球 + 流行 快速划过 */
+.earth:hover + .stars-wrapper > div {
+  animation-duration: 5s;
+}
