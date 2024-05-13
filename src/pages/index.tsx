@@ -7,6 +7,7 @@ import autoprefixer from 'autoprefixer';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import useBreadcrumb from '@/hooks/useBreadcrumb';
 
 const MirrorEditor = dynamic(import('@hankliu/rc-mirror-editor'), {
   ssr: false,
@@ -61,12 +62,15 @@ export default function Index() {
     }
   };
 
+  // 点击面包屑
+  const onClickBreadcrumb = useBreadcrumb();
+
   return (
     <div className="relative w-full text-white/75">
       {!!router.query?.['with-breadcrumb'] && (
         <Breadcrumb className="!m-6 !text-base" separator="/">
           <Breadcrumb.Item>
-            <Link href="https://hankliu62.github.io/toolkits/">小工具集合</Link>
+            <a onClick={onClickBreadcrumb}>小工具集合</a>
           </Breadcrumb.Item>
           <Breadcrumb.Item>天气预报</Breadcrumb.Item>
         </Breadcrumb>
